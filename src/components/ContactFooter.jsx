@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MagneticButton from './MagneticButton';
-import { ArrowUpRight, Check, Copy, Globe, Mail, Phone } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Check, Copy, Globe, Mail, Phone } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 // Clean inline LinkedIn SVG
@@ -67,17 +67,17 @@ export default function ContactFooter({ photoUrl }) {
             </h2>
           </div>
 
-          {/* Dennis Snellenberg Signature Magnetic CTA Button */}
+          {/* Signature Magnetic CTA Button pointing below to contact channels */}
           <div className="pt-2 sm:pt-4">
             <MagneticButton
               as="a"
               href={`mailto:${personalInfo.email}`}
               strength={40}
-              data-cursor-text="EMAIL"
-              className="px-8 py-4 sm:px-12 sm:py-5 md:px-14 md:py-6 rounded-full bg-[#455ce9] hover:bg-[#384ecc] text-white font-medium text-base sm:text-lg md:text-xl shadow-2xl shadow-[#455ce9]/40 transition-all group"
+              data-cursor-text="CONTACT"
+              className="inline-flex items-center gap-3 px-8 py-4 sm:px-12 sm:py-5 md:px-14 md:py-6 rounded-full bg-[#455ce9] hover:bg-[#384ecc] text-white font-medium text-base sm:text-lg md:text-xl shadow-2xl shadow-[#455ce9]/40 transition-all group"
             >
-              <span>Get in touch</span>
-              <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <span>You can contact me here</span>
+              <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-y-1.5 transition-transform duration-300" />
             </MagneticButton>
           </div>
 
