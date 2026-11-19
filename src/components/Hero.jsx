@@ -4,8 +4,8 @@ import { ArrowDownRight, Globe } from 'lucide-react';
 export default function Hero() {
   return (
     <section className="relative h-screen w-full bg-[#999d9e] text-white overflow-hidden select-none">
-      {/* 1. Left Side Pinned Pill (Scalable Dennis Snellenberg Hanger) */}
-      <div className="absolute top-[34%] sm:top-[36%] md:top-[38%] left-0 z-30 flex items-center h-[72px] sm:h-[94px] md:h-[120px] lg:h-[126px] bg-[#1c1d20] text-white pl-4 sm:pl-7 md:pl-12 lg:pl-14 pr-3 sm:pr-4 md:pr-6 rounded-r-full shadow-2xl transition-transform hover:translate-x-1.5 cursor-default">
+      {/* 1. Left Side Pinned Pill (Positioned safely below face on mobile, Dennis scale on desktop) */}
+      <div className="absolute top-[52%] sm:top-[46%] md:top-[38%] left-0 z-30 flex items-center h-[72px] sm:h-[94px] md:h-[120px] lg:h-[126px] bg-[#1c1d20] text-white pl-4 sm:pl-7 md:pl-12 lg:pl-14 pr-3 sm:pr-4 md:pr-6 rounded-r-full shadow-2xl transition-transform hover:translate-x-1.5 cursor-default">
         <div className="text-[12px] sm:text-[14px] md:text-[17px] lg:text-[18px] font-normal leading-[1.25] pr-3 sm:pr-6 md:pr-10 tracking-tight text-white/95">
           <p>Located</p>
           <p>in the</p>
@@ -16,8 +16,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 2. Right Side Arrow & Role Typography (Responsive across Mobile, Tablet, Desktop) */}
-      <div className="absolute top-[22%] sm:top-[24%] md:top-[26%] right-4 sm:right-8 md:right-auto md:left-[69%] lg:left-[70.5%] z-30 text-white select-none pointer-events-none text-right md:text-left">
+      {/* 2. Right Side Arrow & Role Typography (Upper right on mobile, Dennis ~70.5% on desktop) */}
+      <div className="absolute top-[18%] sm:top-[22%] md:top-[26%] right-4 sm:right-8 md:right-auto md:left-[69%] lg:left-[70.5%] z-30 text-white select-none pointer-events-none text-right md:text-left">
         <div className="mb-4 sm:mb-8 md:mb-16 lg:mb-22 flex justify-end md:justify-start">
           <ArrowDownRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-white stroke-[1.35]" />
         </div>
