@@ -39,27 +39,27 @@ export default function ContactFooter({ photoUrl }) {
   };
 
   return (
-    <footer id="contact" className="relative bg-[#1c1d20] text-white pt-28 pb-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12">
+    <footer id="contact" className="relative bg-[#1c1d20] text-white pt-20 sm:pt-28 pb-10 sm:pb-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
         {/* Footer Main Call to Action */}
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-24 space-y-8">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 sm:mb-24 space-y-6 sm:space-y-8">
           {/* Avatar / Portrait thumbnail */}
           <div className="relative group">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl bg-[#9ea2a3] flex items-center justify-center">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl bg-[#9ea2a3] flex items-center justify-center">
               <img
                 src="/photo.png"
                 alt={personalInfo.name}
                 className="w-full h-full object-contain object-bottom pt-1"
               />
             </div>
-            <span className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-[#1c1d20]" />
+            <span className="absolute bottom-1 right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-emerald-500 border-2 border-[#1c1d20]" />
           </div>
 
           <div className="space-y-3">
             <p className="text-xs font-mono uppercase tracking-widest text-neutral-400">
               Have an ambitious vision or role in mind?
             </p>
-            <h2 className="text-5xl sm:text-7xl lg:text-8xl font-display font-extrabold tracking-tight text-white leading-[0.95]">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tight text-white leading-[0.98]">
               Let's work <br />
               <span className="text-neutral-400">
                 together.
@@ -68,24 +68,24 @@ export default function ContactFooter({ photoUrl }) {
           </div>
 
           {/* Dennis Snellenberg Signature Magnetic CTA Button */}
-          <div className="pt-4">
+          <div className="pt-2 sm:pt-4">
             <MagneticButton
               as="a"
               href={`mailto:${personalInfo.email}`}
               strength={40}
               data-cursor-text="EMAIL"
-              className="px-10 py-5 sm:px-14 sm:py-6 rounded-full bg-[#455ce9] hover:bg-[#384ecc] text-white font-medium text-lg sm:text-xl shadow-2xl shadow-[#455ce9]/40 transition-all group"
+              className="px-8 py-4 sm:px-12 sm:py-5 md:px-14 md:py-6 rounded-full bg-[#455ce9] hover:bg-[#384ecc] text-white font-medium text-base sm:text-lg md:text-xl shadow-2xl shadow-[#455ce9]/40 transition-all group"
             >
               <span>Get in touch</span>
-              <ArrowUpRight className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </MagneticButton>
           </div>
 
           {/* Email & Phone Pills */}
-          <div className="pt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="pt-6 sm:pt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <button
               onClick={() => handleCopy(personalInfo.email, 'email')}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-mono text-neutral-200 transition-all hover:border-white/25"
+              className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-mono text-neutral-200 transition-all hover:border-white/25 cursor-pointer"
             >
               <Mail className="w-4 h-4 text-[#455ce9]" />
               <span>{personalInfo.email}</span>
@@ -100,7 +100,7 @@ export default function ContactFooter({ photoUrl }) {
 
             <button
               onClick={() => handleCopy(personalInfo.phone, 'phone')}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-mono text-neutral-200 transition-all hover:border-white/25 cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-mono text-neutral-200 transition-all hover:border-white/25 cursor-pointer"
             >
               <Phone className="w-4 h-4 text-[#455ce9]" />
               <span>{personalInfo.phone}</span>
@@ -117,7 +117,7 @@ export default function ContactFooter({ photoUrl }) {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-mono text-neutral-200 transition-all hover:border-white/25"
+              className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-mono text-neutral-200 transition-all hover:border-white/25"
             >
               <LinkedinIcon className="w-4 h-4 text-[#455ce9]" />
               <span>LinkedIn</span>
